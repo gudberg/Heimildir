@@ -1,0 +1,27 @@
+{
+  "name": "heimildir",
+  "version": "1.0.0",
+  "authors": [
+    "Alex Már Gunnarsson",
+    "Guðberg Sumarliðason",
+    "Ingvar Þór Björnsson"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "~1.3.14",
+    "angular-ui-router": "~0.2.13",
+    "bootstrap": "~3.3.2",
+    "angular-bootstrap": "~0.12.1",
+    "angular-animate": "~1.3.14",
+    "angular-ui-router-anim-in-out": "~0.0.13",
+    "a0-angular-storage": "~0.0.9",
+    "angular-mocks": "~1.3.14",
+    "angular-ui-notification": "~0.0.5",
+    "angular-ui-bootstrap-datetimepicker": "~0.11.2",
+    "angular-charts": "~0.2.7",
+    "less": "~2.4.0"
+  },
+  "resolutions": {
+    "angular": "~1.3.14"
+  }
+}
