@@ -1,4 +1,5 @@
-angular.module('heimildir', ['ui.router'])
+var vm = this;
+angular.module('heimildir', ['ui.router', 'heimildir.controllers'])
 .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
     $stateProvider
       .state('home', {
@@ -6,23 +7,20 @@ angular.module('heimildir', ['ui.router'])
         views: {
           'content@': {
             templateUrl: "js/templates/Home.html",
-            controller: 'HomeController'
+            controller: 'HomeController',
+            controllerAs: 'vm'
           }
         }
       })
       .state('test', {
-        url:'/',
+        url:'/test',
         views: {
           'content@': {
-            template: "js/templates/Home.html",
-            controller: 'HomeController'
+            template: "js/templates/Home.html {{vm.test}}",
+            controller: 'HomeController',
+            controllerAs: 'vm'
           }
         }
       });
       $urlRouterProvider.otherwise('/');
-
-}])
-
-.controller('HomeController', function($scope) {
-  $scope.test = "hello world";
-});
+}]);
