@@ -1,5 +1,4 @@
-var heimildir = angular.module('heimildir', []);
-
-heimildir.controller('HomeController', function($scope) {
+angular.module('heimildir.controllers', [])
+.controller('HomeController', function($scope) {
   $scope.test = "hello world";
 });

@@ -1,14 +1,28 @@
-var heimildir = angular.module('heimildir', ['ui.router']);
-
-heimildir.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
+angular.module('heimildir', ['ui.router'])
+.config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider){
     $stateProvider
       .state('home', {
-        url: '/',
-        views:{
-          "HomeView": {
-            templateUrl: "src/js/templates/Home.html",
-            controller: 'HomeController',
-          }}
+        url:'/',
+        views: {
+          'content@': {
+            templateUrl: "js/templates/Home.html",
+            controller: 'HomeController'
+          }
+        }
+      })
+      .state('test', {
+        url:'/',
+        views: {
+          'content@': {
+            template: "js/templates/Home.html",
+            controller: 'HomeController'
+          }
+        }
       });
       $urlRouterProvider.otherwise('/');
-}]);
+
+}])
+
+.controller('HomeController', function($scope) {
+  $scope.test = "hello world";
+});
