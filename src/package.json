@@ -5,7 +5,8 @@
   "main": "heimildir.js",
   "dependencies": {
     "angular-route": "^1.6.4",
-    "angular-ui-router": "^1.0.3"
+    "angular-ui-router": "^1.0.3",
+    "uikit": "^3.0.0-beta.25"
   },
   "devDependencies": {
     "bower": "^1.7.7",
@@ -30,7 +31,7 @@
     "type": "git",
     "url": "git+https://github.com/gudberg/Heimildir.git"
   },
-  "author": "Alex Már Gunnarsson, Guðberg Sumarliðaso and Ingvar Þór Björnsson",
+  "author": "Alex Már Gunnarsson, Guðberg Sumarliðason and Ingvar Þór Björnsson",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/gudberg/Heimildir/issues"

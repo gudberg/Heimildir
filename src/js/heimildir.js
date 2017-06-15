@@ -12,12 +12,12 @@ angular.module('heimildir', ['ui.router', 'heimildir.controllers'])
           }
         }
       })
-      .state('test', {
-        url:'/test',
+      .state('cite', {
+        url:'/cite',
         views: {
           'content@': {
-            template: "js/templates/Home.html {{vm.test}}",
-            controller: 'HomeController',
+            templateUrl: "js/templates/cite.html",
+            controller: 'CiteController',
             controllerAs: 'vm'
           }
         }

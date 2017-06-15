@@ -1,18 +1,24 @@
-angular.module("heimildir").controller("HeaderController", function ($scope) {
+angular.module("heimildir").controller("HeaderController", function() {
+  var vm = this;
+  vm.headerContent = [{
+    title: 'Log in',
+    action: 'login'
+  }, {
+    title: 'Sign up',
+    action: 'signup'
+  }];
 
-    $scope.submitFeedback = function(action) {
-        //good or bad...
-        if (action) {
-            //good
+  vm.submitFeedback = function(action) {
+    //good or bad...
+    if (action) {
+      //good
 
-            //submit using $http or service
+      //submit using $http or service
 
-        }
-        else {
-            //bad
+    } else {
+      //bad
 
-            //submit using $http or service
-        }
+      //submit using $http or service
     }
-
+  };
 });

@@ -1,5 +1,5 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
-<nav class="navbar-default">
+<nav class="navbar-default" ng-controller="HeaderController as vm">
   <div class="container">
 
     <div class="navbar-header">
@@ -14,20 +14,31 @@
 
     <div class="collapse navbar-collapse" id="example">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="active" href="#">Home</a>
-        </li>
-        <li><a href="#">Services</a>
-        </li>
-        <li><a href="#">About Us</a>
-        </li>
-        <li><a href="#">Blog</a>
-        </li>
-        <li><a href="#">Contact us</a>
+        <li data-ng-repeat="con in vm.headerContent"><a href="#{{con.action}}" data-uk-modal>{{con.title}}</a>
         </li>
       </ul>
     </div>
 
   </div>
 </nav>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<div id="login" class="uk-modal">
+  <div class="uk-modal-dialog">
+    <a class="uk-modal-close uk-close"></a>
+    <div class="uk-modal-header">
+      <h2>Login</h2></div>
+    <input type="text" placeholder="Username or email..." class="uk-form-width-large">
+    <input type="password" placeholder="Password..." class="uk-form-width-large">
+    <div class="uk-modal-footer uk-text-right">
+      <button type="button" class="uk-button">Cancel</button>
+      <button type="button" ui-sref="cite"class="uk-button uk-button-primary">Login</button>
+    </div>
+  </div>
+</div>
+<div id="signup" class="uk-modal">
+  <div class="uk-modal-header">Sign Up!</div>
+  <div class="uk-modal-dialog">
+    <a class="uk-modal-close uk-close">Close</a>
+    <p>SSSSSSSIIIIGNN UPPPM LOREMIPSUM V LOREMIPSUM LOREMIPSUM LOREMIPSUM LOREMIPSUM V LOREMIPSUM LOREMIPSUM LOREMIPSUM LOREMIPSUM V LOREMIPSUM LOREMIPSUM LOREMIPSUM LOREMIPSUM V LOREMIPSUM LOREMIPSUM LOREMIPSUM LOREMIPSUM V LOREMIPSUM</p>
+  </div>
+</div>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>

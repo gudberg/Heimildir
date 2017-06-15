@@ -3,4 +3,8 @@ angular.module('heimildir.controllers', [])
   var vm = this;
   vm.test = "hello world";
   console.log(vm.test);
+})
+.controller('CiteController', function() {
+  var vm = this;
+  vm.test ="holaaa";
 });
