@@ -6,5 +6,14 @@ angular.module('heimildir.controllers', [])
 })
 .controller('CiteController', function() {
   var vm = this;
-  vm.test ="holaaa";
+  vm.systems = ['APA', 'Chicago'];
+
+  vm.systemSelected = function(param) {
+    if(system == 'APA') {
+      console.log('cool');
+    }
+    else {
+      console.log('not cool');
+    }
+  };
 });

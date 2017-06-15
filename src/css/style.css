@@ -10,7 +10,7 @@ body {
     position: relative;
     min-height: 50px;
     border: 1px solid transparent;
-    margin-bottom: 0px; 
+    margin-bottom: 0px;
 
 }
 
@@ -23,4 +23,13 @@ img {
   position: absolute;
   bottom: 0;
   width: 100%;
+}
+
+.systems {
+	display:inline-block;
+	margin-bottom: 5%;
+}
+
+.systems-title {
+	padding-top: 20px;
 }

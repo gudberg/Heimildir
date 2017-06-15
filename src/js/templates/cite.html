@@ -3,8 +3,12 @@
 <section>
   <div class="container">
     <div class="row text-center">
-      <h2>Veldu kerfi</h2>
-      <button class="btn btn-primary btn-simple btn-round" type="button">Simple</button>
+      <h2 class="systems-title">Veldu kerfi</h2>
+      <div class="row">
+        <div class="col col-5 systems" data-ng-repeat="system in vm.systems">
+            <button class="btn btn-primary btn-simple btn-round" data-ng-click="systemSelected(system)"type="button">{{system}}</button>
+        </div>
+      </div>
     </div>
   </div>
 </section>
