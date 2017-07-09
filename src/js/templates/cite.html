@@ -5,9 +5,32 @@
     <div class="row text-center">
       <h2 class="systems-title">Veldu kerfi</h2>
       <div class="row">
-        <div class="col col-5 systems" data-ng-repeat="system in vm.systems">
-            <button class="btn btn-primary btn-simple btn-round" data-ng-click="systemSelected(system)"type="button">{{system}}</button>
+        <div class="col col-5 systems">
+            <button data-ng-class="vm.apaSystem" data-ng-click="vm.selectSystem('APA')"type="button">APA</button>
+            <button data-ng-class="vm.chicagoSystem" data-ng-click="vm.selectSystem('Chicago')"type="button">Chicago</button>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--CATEGORIES-->
+<section data-ng-if="vm.showCategories">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="systems-title">Veldu flokk</h2>
+      <div class="col col-8 container" data-ng-repeat="category in vm.categories">
+        <button data-ng-class="{'btn btn-primary btn-round' : vm.categoryColor[category.index], 'btn btn-primary btn-simple btn-round' : !vm.categoryColor[category.index]}" data-ng-click="category.action()">{{category.name}}</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--SUBCATEGORIES-->
+<section data-ng-if="vm.showSubCategories">
+  <div class="container">
+    <div class="row text-center">
+      <h2 class="systems-title">Veldu undirflokk</h2>
+      <div class="col col-8 container" data-ng-repeat="category in vm.subCategories">
+        <button data-ng-class="{'btn btn-primary btn-round' : vm.categoryColor[category.index], 'btn btn-primary btn-simple btn-round' : !vm.categoryColor[category.index]}" data-ng-click="category.action()">{{category.name}}</button>
       </div>
     </div>
   </div>
