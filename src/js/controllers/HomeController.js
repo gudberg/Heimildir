@@ -7,6 +7,7 @@ angular.module('heimildir.controllers', [])
   vm.selectedSystem = "";
   vm.showCategories = false;
   vm.showSubCategories = false;
+  vm.showInputFields = false;
 
   const EMPTY_COLOR = 'btn btn-primary btn-simple btn-round';
   const FULL_COLOR = 'btn btn-primary btn-round';
@@ -42,6 +43,7 @@ angular.module('heimildir.controllers', [])
       name: 'Bækur',
       action: function() {
         vm.resetCategoryColor('Bækur');
+        vm.showInputFields = false;
         vm.setBookCategory();
       },
       index: 0
@@ -50,6 +52,7 @@ angular.module('heimildir.controllers', [])
       name: 'Myndbönd',
       action: function() {
         vm.resetCategoryColor('Myndbönd');
+        vm.showInputFields = false;
         vm.setVideoCategory();
       },
       index: 1
@@ -74,30 +77,31 @@ angular.module('heimildir.controllers', [])
       {
         name: 'Erlendur Höfundur',
         action: function() {
-          console.log('Erlendur');
+          vm.showInputFields = true;
         }
       },
       {
         name: 'Íslenskur Höfundur',
         action: function() {
-          console.log('Íslenskur');
+          vm.showInputFields = true;
         }
       },
     ];
   };
 
+  vm.placeHolder = "lala"
   vm.setVideoCategory = function() {
     vm.subCategories = [
       {
         name: 'Youtube myndbönd',
         action: function() {
-          console.log('tubbarinn');
+          vm.showInputFields = true;
         }
       },
       {
         name: 'Myndbönd af erlendum síðum',
         action: function() {
-          console.log('annað en tubbarinn');
+          vm.showInputFields = true;
         }
       }
     ];
